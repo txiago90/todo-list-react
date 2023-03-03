@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+  justify-content: center;
+  min-width: 414px;
+  gap: 0.75rem;
+  background: var(--gray-700);
+  padding: 4.5rem 0 5rem;
+  position: relative;
+  border-bottom: 1px solid var(--gray-400) ;
+}
+
+.header > h1 {
+  font-size: 2.5rem;
+  color: var(--blue-dark);
+}
+
+h1 > span { color: var(--gray-100); }
+
+.newTaskForm {
+  display: flex;
+  align-items: center;
+  background: var(--gray-500);
+  width: 100%;
+  max-width: 46rem;
+  min-width: 21.5rem;
+  padding-left: 1rem;
+
+  position: absolute;
+  bottom: calc( -3.375rem / 2);
+  /* box-shadow: 0px 2px 15px -2px var(--gray-700); */
+}
+
+.newTaskForm input {
+  width: 100%;
+  background: transparent;
+  color: var(--gray-100);
+  border: 0;
+  padding: 1rem;
+  
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: ease 0.2s;
+}
+
+.newTaskForm input:placeholder-shown {
+  font-size: 0.875rem;
+}
+
+.newTaskForm button {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+  border: none;
+  
+  cursor: pointer;
+  
+  font-size: 0.875rem;
+  font-weight: 500;
+  
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  transition: all 0.2s;
+}
+
+.newTaskForm button:not(:disabled):hover {
+  filter: brightness(1.25);
+}
+
+.newTaskForm button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (width <= 736px) {
+  .newTaskForm button > span{
+    display: none;
+  }
+}

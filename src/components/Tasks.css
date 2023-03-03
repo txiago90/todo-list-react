@@ -1,0 +1,59 @@
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 46rem;
+  min-width: 25.875rem;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.tasksInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+@media (width <= 46rem) {
+  section {
+    padding: 0 1.25rem;
+  }
+}
+
+.tasksInfo > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.tasksInfo > div > span {
+  background: var(--blue-dark);
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+}
+
+.listTask {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.empty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  color: var(--gray-300);
+  gap: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+
+.empty p {
+  font-weight: 700;
+}
